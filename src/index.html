@@ -248,7 +248,10 @@ function measureCRP() {
     </div>
   </div>
 
-  <header class="l-home-banner" style="background-image: url('/assets/images/homework/banner.png')">
+  <header class="l-home-banner" >
+    <picture>
+      <img loading="eager" src="/assets/images/homework/banner.png" alt="" class="lazy-image background">
+    </picture>
     <div class="layout">
       <div class="home-banner__content text">
         <h1 class="headline-1">Seamless<br> payment option</h1>
@@ -596,8 +599,14 @@ function measureCRP() {
     </article>
     <!-- // -->
     <!-- customers -->
-    <section class="page-section page-section--customers"
-      style="background-image: url('/assets/images/homework/bg-sec-customers.jpg')">
+    <section class="page-section page-section--customers">
+      <picture>
+      <img 
+      loading="lazy"
+      data-src ="/assets/images/homework/bg-sec-customers.jpg"
+      class="lazy-image"
+      >
+      </picture>
       <div class="layout">
         <div class="text text--bg-blue">
           <h3 class="headline-3">
