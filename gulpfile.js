@@ -197,7 +197,7 @@ gulp.task(
     'extra-files',
     'images',
     'purgecss',
-    'generate-service-worker',
+    // 'generate-service-worker',
     // 'generate-critical-css',
   )
 );
