@@ -12,8 +12,7 @@ This Gulp Starter Kit provides a simple way of setting up a modern web developme
 Here is a list of the current features:
 
 - Copy HTML files from `src` to `dist` directory
-- Compile Pug template files (`.pug`) from `src` to HTML files and put them inside `dist` directory
-- Compile CSS preprocessor code (Sass/SCSS, Less, Stylus) to CSS
+- Compile CSS preprocessor code (Sass/SCSS) to CSS
 - Autoprefix and minify CSS and put it inside `dist` directory
 - Compile ES6+ to ES5, concatenate JS files and minify code
 - Compress and copy images into `dist` directory
@@ -24,7 +23,7 @@ Here is a list of the current features:
 ## Requirements
 This should be installed on your computer in order to get up and running:
 
-- [Node.js](https://nodejs.org/en/) (Required node version is >= 10.0)
+- [Node.js](https://nodejs.org/en/) (Required node version is >= 16.13.0)
 - [Gulp 4](https://gulpjs.com/)
 
 ## Dependencies
@@ -44,11 +43,7 @@ These [npm](https://www.npmjs.com/) packages are used in the Gulp Starter Kit:
 - [gulp-sass](https://www.npmjs.com/package/gulp-sass)
 - [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
 - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
-- [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
 - [webpack-stream](https://www.npmjs.com/package/webpack-stream)
-- [gulp-pug](https://www.npmjs.com/package/gulp-pug)
-- [gulp-less](https://www.npmjs.com/package/gulp-less)
-- [gulp-stylus](https://www.npmjs.com/package/gulp-stylus)
 - [sw-precache](https://www.npmjs.com/package/sw-precache)
 - [sw-toolbox](https://www.npmjs.com/package/sw-toolbox)
 - [gulp-purgecss](https://www.npmjs.com/package/gulp-purgecss)
@@ -90,8 +85,6 @@ Here's a list of the currently supported CSS preprocessors and the corresponding
 
 - Sass (`src/assets/sass`)
 - SCSS (`src/assets/scss`)
-- Less (`src/assets/less`)
-- Stylus (`src/assets/stylus`)
 
 ### How can I specify for which browsers CSS code should be autoprefixed?
 The recommended way of specifying which browsers should be targeted by the CSS autoprefixer is to add a `browserslist` key to `package.json`:
