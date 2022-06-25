@@ -35,6 +35,8 @@ const gulp                      = require('gulp'),
       critical                  = require('critical'),
       sass                      = require('gulp-sass')(require('sass')),
       purgecss                  = require('gulp-purgecss'),
+      imagemin                  = require('gulp-imagemin'),
+      imageminWebp              = require('imagemin-webp')
 
       src_folder                = './src/',
       src_assets_folder         = src_folder + 'assets/',
@@ -56,6 +58,12 @@ gulp.task('html-minified', () => {
   return gulp.src(src_folder + '*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(dist_folder))
+});
+
+gulp.task('imagemin', () => {
+  return gulp.src(src_assets_folder + 'images/**/*')
+  .pipe(imagemin([imageminWebp({quality: 50}) ]))
+  .pipe(gulp.dest(dist_assets_folder + 'images'))
 });
 
 gulp.task('sass', (cb) => {
@@ -188,14 +196,15 @@ gulp.task(
   'build',
   gulp.series(
     'clear',
-    'html', /* replace the 'html' with 'html-minified' if you need minification */
+    'html-minified', /* replace the 'html' with 'html-minified' if you need minification */
     'sass',
     'js',
-    'js-copy', /* replace the 'js-copy' with 'js-minified' if you need minification */
+    'js-minified', /* replace the 'js-copy' with 'js-minified' if you need minification */
     'fonts',
     'videos',
     'extra-files',
-    'images',
+    'imagemin',
+    // 'images',
     // 'purgecss',
     // 'generate-service-worker',
     // 'generate-critical-css',
