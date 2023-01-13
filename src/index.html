@@ -10,10 +10,10 @@
   <meta name="robots" content="noindex, nofollow">
   <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link href="/favicon.ico" rel="icon">
-  
+
   <link rel="preload" href="/assets/css/homework/app.css" as="style">
   <link href="/assets/css/homework/app.css" rel="stylesheet">
-  
+
   <link rel="preconnect" href="https://use.typekit.net">
 
   <link rel="preload" href="/assets/css/homework/base/fonts.css" as="style">
@@ -24,8 +24,9 @@
 
   <link rel="preload" href="assets/fonts/Montserrat/subset-Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin >
   <link rel="preload" href="assets/fonts/Montserrat/subset-Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin >
+  <link rel="preload" href="/assets/images/homework/banner.png" />
   <link rel="preload" href="https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/l?primer=e6066692ab328d1a92bb155659ed6609b693e1e352f0e8982e4224719b13bdfb&fvd=n6&v=3" as="font" type="font/woff2" crossorigin >
-  
+
   <link rel="preload" href="/assets/images/homework/banner.png" as="image">
   <style>
     @font-face {
@@ -123,7 +124,9 @@ function measureCRP() {
 
 </head>
 <body onload="measureCRP()">
-
+  <picture style="display: none">
+    <img fetchPriority="high" src="/assets/images/homework/banner.png" alt="" class="lazy-image background">
+  </picture>
   <div class="overlay"></div>
   <div class="search">
     <div class="layout3 text text--bg-grey">
@@ -249,7 +252,7 @@ function measureCRP() {
 
   <header class="l-home-banner" >
     <picture>
-      <img loading="eager" src="/assets/images/homework/banner.png" alt="" class="lazy-image background">
+      <img fetchPriority="high" src="/assets/images/homework/banner.png" alt="" class="lazy-image background">
     </picture>
     <div class="layout">
       <div class="home-banner__content text">
@@ -600,7 +603,7 @@ function measureCRP() {
     <!-- customers -->
     <section class="page-section page-section--customers">
       <picture>
-      <img 
+      <img
       loading="lazy"
       data-src ="/assets/images/homework/bg-sec-customers.jpg"
       class="lazy-image"
@@ -873,7 +876,7 @@ function measureCRP() {
       const resources = document.querySelectorAll("[loading=lazy]");
       resources.forEach(resource => {
           resource.setAttribute("src", resource.getAttribute("data-src"))
-      }) 
+      })
     } else {
       let script = document.createElement("script");
       script.async = true;
