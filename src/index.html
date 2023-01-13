@@ -24,10 +24,10 @@
 
   <link rel="preload" href="assets/fonts/Montserrat/subset-Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin >
   <link rel="preload" href="assets/fonts/Montserrat/subset-Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin >
-  <link rel="preload" href="/assets/images/homework/banner.png" />
   <link rel="preload" href="https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/l?primer=e6066692ab328d1a92bb155659ed6609b693e1e352f0e8982e4224719b13bdfb&fvd=n6&v=3" as="font" type="font/woff2" crossorigin >
 
   <link rel="preload" href="/assets/images/homework/banner.png" as="image">
+  <link rel="preload" href="/assets/images/homework/banner_main.jpg"  as="image"/>
   <style>
     @font-face {
       font-family: "proxima-nova";
@@ -125,7 +125,7 @@ function measureCRP() {
 </head>
 <body onload="measureCRP()">
   <picture style="display: none">
-    <img fetchPriority="high" src="/assets/images/homework/banner.png" alt="" class="lazy-image background">
+    <img fetchPriority="high" loading="lazy" src="/assets/images/homework/banner_main.jpg" data-src="/assets/images/homework/banner.png" alt="" class="lazy-image background">
   </picture>
   <div class="overlay"></div>
   <div class="search">
@@ -141,7 +141,7 @@ function measureCRP() {
 
   <nav class="l-navbar">
     <a class="logo" href="/">
-      <img loading="eager" src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider">
+      <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider">
     </a>
 
     <ul class="navbar-menu">
@@ -151,7 +151,7 @@ function measureCRP() {
       <li><a title="Log in" href="/">Log in</a></li>
       <li><a title="Contact" href="/">Contact</a></li>
       <li><a class="navbar-menu__search js-open-searchbar" href="#"
-          title="What are you looking for?"><span>Search</span></a></li>
+        title="What are you looking for?"><span>Search</span></a></li>
     </ul>
     <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
   </nav>
@@ -252,7 +252,7 @@ function measureCRP() {
 
   <header class="l-home-banner" >
     <picture>
-      <img fetchPriority="high" src="/assets/images/homework/banner.png" alt="" class="lazy-image background">
+      <img fetchPriority="high" loading="lazy" src="/assets/images/homework/banner_main.jpg" data-src="/assets/images/homework/banner.png"  alt="" class="lazy-image background">
     </picture>
     <div class="layout">
       <div class="home-banner__content text">
@@ -751,7 +751,7 @@ function measureCRP() {
     <div class="l-footer__top">
       <div class="layout">
         <div class="col-15 left">
-          <a title="Home" href="/"><img loading="lazy" data-src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141"
+          <a title="Home" href="/"><img src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141"
               height="42"></a>
         </div>
         <div class="col-85 l-footer__top-links right">
