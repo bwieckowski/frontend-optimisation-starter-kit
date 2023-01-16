@@ -30,7 +30,6 @@ $breakpoint3: 1340px;
 			.headline-1,
 			p,
 			img,
-			.home-banner__anim,
 			.l-home-banner__3-cols > div {
 				opacity: 1 !important;
 			}
@@ -1404,7 +1403,7 @@ $breakpoint3: 1340px;
 
 		@media screen and (max-width: 1100px) {
 
-			.l-footer__top { 
+			.l-footer__top {
 				.col-15,
 				.col-85 {
 					width: 100%;
